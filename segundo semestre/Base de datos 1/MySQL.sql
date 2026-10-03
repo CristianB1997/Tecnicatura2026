@@ -1,0 +1,1 @@
+SELECT nombre, apellido, edad FROM estudiante;
