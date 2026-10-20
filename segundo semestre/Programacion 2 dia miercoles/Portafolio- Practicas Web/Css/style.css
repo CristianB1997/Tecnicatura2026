@@ -1,8 +1,27 @@
+/*Definiendo variables de color en css*/
+:root{
+    --body-bg-color: rgb(43,43,70);
+    --text-color: white;
+    --colorh1-color: rgb(215,211,211);
+}
+/*Aplicando variable creada en el root al body de nuestra web*/
+/*Reemplace el body con el uso de variables css*/
+
+
 body{
-    background-color: rgb(9, 52, 52);
-    color: rgb(170, 222, 213);
+    /*background-color: rgb(9, 52, 52);
+    color: rgb(170, 222, 213);*/
+    display: flex;                 /*Se agrego el display y el flex-direction*/
+    flex-direction: column;
+    background: var(--body-bg-color);
+    color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+h1,h2 {
+    color: var(--colorh1-color)
+}
+
+
 
 /*Título del header*/
 .titulo{
@@ -33,18 +52,10 @@ a{
     text-decoration: none;
     color: white;
 }
-.sobremi{
+/*Todo lo que contiene main*/
+.main-container{
     display: flex;
-    justify-content: center; /*Esto centra el elemento*/
-}
-.container-sobremi{
-    display: flex;
-    width: 50%;/*ancho*/
-    padding: 2rem;
-    margin-top: 5rem;/*margen a lo alto*/
-    line-height: 2.5rem;/*espaciado entre los párrafos del texto*/
-    font-size: large;/*tamaño de la fuente*/
-    color: azure;
+    flex-direction: column;
 
 }
 
@@ -61,26 +72,18 @@ a{
         align-items: center;
 
     }
-    .container-sobremi{
-        width: 100%;
-        padding: 1;
-        margin-top: 1rem; /*margen a lo alto*/
-        line-height: 2.5rem;/*espaciado entre los parrafos del texto*/
-        font-size: small;/*tamaño de la fuente*/
-    }
 }
-
 /*Tableta (Pantallas medianas, entre 767px y superiores)*/
 @media (min-width: 768px) and (max-width: 1023px) {
-    .titulo {
+    .titulo{
         justify-content: center;
     }
-    .navigation {
+    .navigation{
         gap: 2rem;
         justify-content: center;
     }
-    
 }
+
 /*Escritorio (Pantallas anchas, 1024px y superiores)*/
 @media (min-width: 1024px) {
     .titulo {
@@ -92,7 +95,6 @@ a{
         margin: 0 3rem;
     }
 }
-
 
 
 
